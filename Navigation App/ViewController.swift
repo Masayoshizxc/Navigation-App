@@ -58,6 +58,8 @@ class ViewController: UIViewController, UISearchResultsUpdating, CLLocationManag
     }
     
     
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
@@ -75,6 +77,9 @@ class ViewController: UIViewController, UISearchResultsUpdating, CLLocationManag
               !query.trimmingCharacters(in: .whitespaces).isEmpty else {
                   return
               }
+        
+        
+        
         
         GooglePlacesManager.shared.findPlaces(query: query) { result in
             switch result{

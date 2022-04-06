@@ -26,6 +26,8 @@ final class GooglePlacesManager{
     
     
     
+    
+    
     public func findPlaces(query: String, completion: @escaping (Result<[Place], Error>) -> Void){
         let filter = GMSAutocompleteFilter()
         filter.type = .geocode
